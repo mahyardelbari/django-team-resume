@@ -1,4 +1,6 @@
 {% load static %}
+{% load render_partial %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,22 +71,22 @@
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link active">
+                        <a href="{% url 'index' %}" class="nav-link active">
                             خانه
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">
+                        <a href="{% url 'about-us' %}" class="nav-link">
                             درباره ما
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="formProject.html" class="nav-link">
+                        <a href="{% url 'form-project' %}" class="nav-link">
                             سفارش پروژه
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="team.html" class="nav-link">
+                        <a href="{% url 'team-member' %}" class="nav-link">
                             اعضای تیم
                         </a>
                     </li>
@@ -102,16 +104,16 @@
             </div>
             <ul class="navbar-nav navbar-nav-mobile mt-auto">
                 <li class="nav-item mt-3">
-                    <a href="./index.html" class="nav-link nav-link-mobile active">خانه</a>
+                    <a href="{% url 'index' %}" class="nav-link nav-link-mobile active">خانه</a>
                 </li>
                 <li class="nav-item mt-3">
-                    <a href="about.html" class="nav-link nav-link-mobile">درباره ما</a>
+                    <a href="{% url 'about-us' %}" class="nav-link nav-link-mobile">درباره ما</a>
                 </li>
                 <li class="nav-item mt-3">
-                    <a href="formProject.html" class="nav-link nav-link-mobile">سفارش پروژه</a>
+                    <a href="{% url 'form-project' %}" class="nav-link nav-link-mobile">سفارش پروژه</a>
                 </li>
                 <li class="nav-item mt-3">
-                    <a href="team.html" class="nav-link nav-link-mobile">اعضای تیم</a>
+                    <a href="{% url 'team-member' %}" class="nav-link nav-link-mobile">اعضای تیم</a>
                 </li>
             </ul>
         </nav>
@@ -368,7 +370,7 @@
             <!-- title section -->
             <h2 class="display-5 title-section">ارتباط با ما</h2>
             <!-- end title section -->
-            <form class="section-callWe-form my-5" action="#" method="get">
+            <form class="section-callWe-form my-5" action="#" method="get" dir="rtl">
                 <input class="form-control section-callWe-textbox" placeholder="نام شما ..." id="callWeName"/>
                 <input class="form-control section-callWe-textbox" placeholder="نام خانوادگی شما..." id="callWeLastname"/>
                 <input class="form-control section-callWe-textbox" placeholder="شماره تلفن..." id="callWePhone"/>

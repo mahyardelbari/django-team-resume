@@ -1,10 +1,11 @@
 {% load static %}
+{% load render_partial %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>soroush rashedi portfolio</title>
+    <title>{{ member.full_name }}</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- end bootstrap -->
@@ -19,65 +20,7 @@
     </div>
     <!-- end loading -->
     <!-- header -->
-    <header class="header-index header-pages py-4">
-        <div class="bg-header"></div>
-        <div class="container">
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-md">
-                <a href="index.html" class="navbar-brand">teamSite</a>
-                <button class="navbar-toggler">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                خانه
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">
-                                درباره ما
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="formProject.html" class="nav-link">
-                                سفارش پروژه
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="team.html" class="nav-link active">
-                                اعضای تیم
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- end navbar -->
-        <!-- navbar mobile -->
-        <nav class="navbar navbar-mobile">
-            <div class="d-flex">
-            <a href="index.html" class="navbar-brand navbar-brand-mobile">teamSite</a>
-            <button class="close navbar-mobile-close">
-                <span>&times;</span>
-            </button>
-            </div>
-            <ul class="navbar-nav navbar-nav-mobile mt-auto">
-                <li class="nav-item mt-3">
-                    <a href="index.html" class="nav-link nav-link-mobile">خانه</a>
-                </li>
-                <li class="nav-item mt-3">
-                    <a href="about.html" class="nav-link nav-link-mobile">درباره ما</a>
-                </li>
-                <li class="nav-item mt-3">
-                    <a href="formProject.html" class="nav-link nav-link-mobile">سفارش پروژه</a>
-                </li>
-                <li class="nav-item mt-3">
-                    <a href="team.html" class="nav-link nav-link-mobile active">اعضای تیم</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- end navbar mobile -->
+    {% include 'members/patial/header_patial.html' %}
         <div class="my-7 di-rtl">
             <div class="header-texts">
                 <h1 class="header-pages-title">{{ member.full_name }}</h1>
@@ -171,67 +114,7 @@
           </div>
         </div>
       </section><!-- End About Section -->چ
-    <footer class="footer" id="footer">
-        <div class="footer-bg-opacity"></div>
-        <div class="footer-container">
-        <div class="container">
-            <!-- row -->
-                <div class="row">
-                <div class="col-10 col-md-6 mx-auto">
-                    <h2 class="footer-title display-5 text-center">
-                        صفحات
-                    </h2>
-                    <div class="hr"></div>
-                    <div class="my-3 d-flex justify-content-center">
-                        <ul class="footer-ul">
-                            <a href="#" class="footer-link">خانه</a>
-                            <a href="#" class="footer-link">درباره ی ما</a>
-                            <a href="#" class="footer-link">درخواست پروژه</a>
-                            <a href="#" class="footer-link">اعضای تیم</a>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end ... -->
-                <!-- ... -->
-                <div class="col-10 col-md-6 mx-auto">
-                    <h2 class="footer-title display-5 text-center">
-                        شبکه های اجتماعی
-                    </h2>
-                    <div class="hr"></div>
-                    <div class="my-3 d-flex justify-content-center">
-                        <ul class="footer-ul">
-                            <a href="#" class="footer-link">اینستاگرام
-                                <span class="footer-link-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </span>
-                            </a>
-                            <a href="#" class="footer-link">تلگرام
-                                <span class="footer-link-icon">
-                                    <i class="fab fa-telegram"></i>
-                                </span>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-        </div>
-            <!-- footer bottom -->
-            <div class="w-100 footer-bottom d-flex justify-content-center py-5">
-                <p class="footer-bottom-text">شماره تلفن: <span>09140000000</span></p>
-                <div class="footer-bottom-icons">
-                <a href="#" class="footer-bottom-icon">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="footer-bottom-icon">
-                    <i class="fab fa-telegram" aria-hidden="true"></i>
-                </a>
-                </div>
-            </div>
-            <!-- end footer bottom -->
-            </div>
-    </footer>
-
+    {% include "members/patial/footer_partial.html" %}
     <!-- script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>

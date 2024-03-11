@@ -1,3 +1,5 @@
+{% load render_partial %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,66 +19,7 @@
         <div class="load"></div>
     </div>
     <!-- end loading -->
-    <!-- header -->
-    <header class="header-index header-pages py-4">
-        <div class="bg-header"></div>
-        <div class="container">
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-md">
-                <a href="index.html" class="navbar-brand">teamSite</a>
-                <button class="navbar-toggler">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                خانه
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./about.html" class="nav-link active">
-                                درباره ما
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="formProject.html" class="nav-link">
-                                سفارش پروژه
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="team.html" class="nav-link">
-                                اعضای تیم
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- end navbar -->
-        <!-- navbar mobile -->
-        <nav class="navbar navbar-mobile">
-            <div class="d-flex">
-            <a href="index.html" class="navbar-brand navbar-brand-mobile">teamSite</a>
-            <button class="close navbar-mobile-close">
-                <span>&times;</span>
-            </button>
-            </div>
-            <ul class="navbar-nav navbar-nav-mobile mt-auto">
-                <li class="nav-item mt-3">
-                    <a href="index.html" class="nav-link nav-link-mobile">خانه</a>
-                </li>
-                <li class="nav-item mt-3">
-                    <a href="./about.html" class="nav-link nav-link-mobile active">درباره ما</a>
-                </li>
-                <li class="nav-item mt-3">
-                    <a href="formProject.html" class="nav-link nav-link-mobile">سفارش پروژه</a>
-                </li>
-                <li class="nav-item mt-3">
-                    <a href="team.html" class="nav-link nav-link-mobile">اعضای تیم</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- end navbar mobile -->
+    {% include 'members/patial/header_patial.html' %}
         <div class="my-7 di-rtl">
             <div class="header-texts">
                 <h1 class="header-pages-title">درباره ما</h1>
@@ -137,22 +80,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="d-flex flex-column align-items-end my-5">
-                    <div class="section-about-us-item">
-                        <p style="display: inline-block;">طراحی سایت</p>
-                        <i class="fab fa-google" aria-hidden="true"></i>
-                    </div>
-                    <div class="section-about-us-item">
-                        <p style="display: inline-block;">دیزاین سایت</p>
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <div class="section-about-us-item">
-                        <p style="display: inline-block;">رسپانسیو سازی</p>
-                        <i class="fas fa-layer-group    "></i>
-                    </div>
-                </div> -->
+
             </div>
         </section>
+    {% include 'members/patial/footer_partial.html' %}
         <!-- end section about us -->
     <!-- end section about -->
     <!-- script -->

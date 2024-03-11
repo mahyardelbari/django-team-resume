@@ -1,3 +1,4 @@
+{% load render_partial %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -19,45 +20,10 @@
     </div>
     <!-- end loading -->
     <!-- header -->
-    <header class="header-index header-pages py-4">
-        <div class="bg-header"></div>
-        <div class="container">
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-md">
-                <a href="index.html" class="navbar-brand">teamSite</a>
-                <button class="navbar-toggler">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                خانه
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">
-                                درباره ما
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="formProject.html" class="nav-link">
-                                سفارش پروژه
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./team.html" class="nav-link active">
-                                اعضای تیم
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- end navbar -->
-        <!-- navbar mobile -->
+    {% include 'members/patial/header_patial.html' %}
         <nav class="navbar navbar-mobile">
             <div class="d-flex">
-            <a href="index.html" class="navbar-brand navbar-brand-mobile">teamSite</a>
+            <a href="{% url 'index' %}" class="navbar-brand navbar-brand-mobile">teamSite</a>
             <button class="close navbar-mobile-close">
                 <span>&times;</span>
             </button>
@@ -122,104 +88,10 @@
                     </a>
                     </div>
                 {% endfor %}
-                <!-- end single item -->
-                <!-- single item -->
-{#                <div class="col-10 col-md-6 col-lg-4 mx-auto">#}
-{#                    <a href="teamPerson-detalis.html" class="text-decoration-none">#}
-{#                    <div class="card card-team-page py-3">#}
-{#                        <img src="../../static/image/testimonial-2.jpg" class="card-img-top card-team-page-img mx-auto"/>#}
-{#                        <div class="card-body bg-white">#}
-{#                            <div class="text-center">#}
-{#                                <h3 class="card-team-page-title card-title">مهیار دلبری</h3>#}
-{#                                <p class="lead card-team-page-text my-3 w-75 mx-auto">#}
-{#                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.#}
-{#                                </p>#}
-{#                                </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </a>#}
-{#                </div>#}
-{#                <!-- end single item -->#}
-{#                <!-- single item -->#}
-{#                <div class="col-10 col-md-6 col-lg-4 mx-auto">#}
-{#                    <a href="teamPerson-detalis.html" class="text-decoration-none">#}
-{#                    <div class="card card-team-page py-3">#}
-{#                        <img src="../../static/image/testimonial-2.jpg" class="card-img-top card-team-page-img mx-auto"/>#}
-{#                        <div class="card-body bg-white">#}
-{#                            <div class="text-center">#}
-{#                                <h3 class="card-team-page-title card-title">امیر صدیق</h3>#}
-{#                                <p class="lead card-team-page-text my-3 w-75 mx-auto">#}
-{#                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.#}
-{#                                </p>#}
-{#                                </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </a>#}
-{#                </div>#}
-                <!-- end single item -->
             </div>
         </div>
     </section>
-    <footer class="footer" id="footer">
-        <div class="footer-bg-opacity"></div>
-        <div class="footer-container">
-        <div class="container">
-            <!-- row -->
-                <div class="row">
-                <div class="col-10 col-md-6 mx-auto">
-                    <h2 class="footer-title display-5 text-center">
-                        صفحات
-                    </h2>
-                    <div class="hr"></div>
-                    <div class="my-3 d-flex justify-content-center">
-                        <ul class="footer-ul">
-                            <a href="#" class="footer-link">خانه</a>
-                            <a href="#" class="footer-link">درباره ی ما</a>
-                            <a href="#" class="footer-link">درخواست پروژه</a>
-                            <a href="#" class="footer-link">اعضای تیم</a>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end ... -->
-                <!-- ... -->
-                <div class="col-10 col-md-6 mx-auto">
-                    <h2 class="footer-title display-5 text-center">
-                        شبکه های اجتماعی
-                    </h2>
-                    <div class="hr"></div>
-                    <div class="my-3 d-flex justify-content-center">
-                        <ul class="footer-ul">
-                            <a href="#" class="footer-link">اینستاگرام
-                                <span class="footer-link-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </span>
-                            </a>
-                            <a href="#" class="footer-link">تلگرام
-                                <span class="footer-link-icon">
-                                    <i class="fab fa-telegram"></i>
-                                </span>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
-        </div>
-            <!-- footer bottom -->
-            <div class="w-100 footer-bottom d-flex justify-content-center py-5">
-                <p class="footer-bottom-text">شماره تلفن: <span>09140000000</span></p>
-                <div class="footer-bottom-icons">
-                <a href="#" class="footer-bottom-icon">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="footer-bottom-icon">
-                    <i class="fab fa-telegram" aria-hidden="true"></i>
-                </a>
-                </div>
-            </div>
-            <!-- end footer bottom -->
-            </div>
-    </footer>
+    {% include "members/patial/footer_partial.html" %}
 
     <!-- end section front -->
     <!-- script -->

@@ -15,3 +15,9 @@ def team_member(request):
 def member_detail(request, name):
 	member = Team.objects.get(full_name=name)
 	return render(request, 'members/teamPerson-detalis.html', {'member': member})
+
+def form_project(request):
+	return render(request, 'members/formProject.html')
+
+def about_us(request):
+	return render(request, 'members/about.html')

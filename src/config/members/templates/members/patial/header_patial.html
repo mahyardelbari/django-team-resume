@@ -1,0 +1,60 @@
+    <!-- header -->
+    <header class="header-index header-pages py-4">
+        <div class="bg-header"></div>
+        <div class="container">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-md">
+                <a href="index.html" class="navbar-brand">teamSite</a>
+                <button class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a href="{% url 'index' %}" class="nav-link">
+                                خانه
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about-us' %}" class="nav-link">
+                                درباره ما
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'form-project' %}" class="nav-link ">
+                                سفارش پروژه
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'team-member' %}" class="nav-link">
+                                اعضای تیم
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end navbar -->
+        <!-- navbar mobile -->
+        <nav class="navbar navbar-mobile">
+            <div class="d-flex">
+            <a href="index.html" class="navbar-brand navbar-brand-mobile">teamSite</a>
+            <button class="close navbar-mobile-close">
+                <span>&times;</span>
+            </button>
+            </div>
+            <ul class="navbar-nav navbar-nav-mobile mt-auto">
+                <li class="nav-item mt-3">
+                    <a href="{% url 'index' %}" class="nav-link nav-link-mobile">خانه</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <a href="{% url 'about-us' %}" class="nav-link nav-link-mobile">درباره ما</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <a href="{% url 'form-project' %}" class="nav-link nav-link-mobile active">سفارش پروژه</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <a href="{% url 'team-member' %}" class="nav-link nav-link-mobile">اعضای تیم</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- end navbar mobile -->
