@@ -1,0 +1,669 @@
+@font-face{
+    font-family: ferda;
+    src: url(../fonts/Fedra\ Arabic\ Display\ AR\ LT\ Black.ttf) format('truetype');
+}
+@font-face{
+    font-family: iran-sans;
+    src: url(../fonts/Iranian\ Sans.ttf) format('truetype');
+}
+@font-face{
+    font-family: iran-sans2;
+    src: url(../fonts/IRANSANSDNFANUM.TTF) format('truetype');
+}
+@font-face{
+    font-family: iranSans;
+    src: url(../fonts/IRANSansX-Bold.woff);
+}
+@font-face{
+    font-family: iranSans2;
+    src: url(../fonts/IRANSansX-Regular.woff);
+}
+html{
+    scroll-behavior: smooth;
+}
+/* loading */
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background: black;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.load{
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    border-radius: 50%;
+    border-right: 4px double orange;
+    border-left: 4px double orange;
+    position: relative;
+    animation: load 2s linear infinite;
+}
+.load::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+}
+@keyframes load{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* header */
+.header-index{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.bg-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../image/bg-header.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+    opacity: 0.4;
+}
+.header-title{
+    font-family: iran-sans2;
+}
+.text-header{
+    font-family: iran-sans2;
+}
+/* navbar */
+.navbar-brand{
+    font-size: 2.1rem;
+    font-family: iran-sans;
+}
+.nav-item{
+    margin-left: 12px;
+    font-family: iran-sans;
+    font-size: 1.2rem;
+}
+.navbar{
+    background: transparent;
+}
+.navbar-toggler{
+    font-size: 2rem;
+    border: none !important;
+    box-shadow: 0 0 0 !important;
+}
+.nav-link{
+    position: relative;
+    text-shadow: 0 0 15px black;
+    font-weight: bold;
+    color: white !important;
+}
+.nav-link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: rgb(16, 250, 114);
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+}
+.nav-link:hover::after{
+    width: 100%;
+}
+.row-header{
+    margin-top: 100px;
+}
+.img-header{
+    border-radius: 40% 20% 40% 20%;
+    width: 85%;
+}
+.btn-header{
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid orange;
+    font-size: 1rem;
+    font-family: iran-sans;
+}
+.btn-header:hover{
+    background: orange;
+}
+.decoration{
+    width: 60%;
+    height: 6px;
+    background: orange;
+}
+/* navbar mobile */
+.navbar-mobile{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(9, 158, 133, 0.589);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s linear;
+    left: 100%;
+}
+.navbar-nav-mobile{
+    margin-bottom: auto;
+}
+.navbar-nav-mobile .nav-item{
+    font-size: 2rem;
+}
+.nav-link-mobile{
+    font-weight: normal;
+    color: white !important;
+}
+.navbar-brand-mobile{
+    margin-bottom: auto;
+    color: white !important;
+    font-size: 3.2rem;
+}
+.navbar-mobile-close{
+    font-size: 3.3rem;
+    background: transparent;
+    border: none !important;
+}
+.active::after{
+    width: 100%;
+}
+/* end navbar mobile */
+/* sections */
+/* section about */
+.title-section{
+    text-align: end;
+    font-family: ferda;
+    position: relative;
+    background: url(../image/Software-Developer-Main-Image.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.title-section::before{
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    width: 50%;
+    height: 6px;
+    background-color: black;
+    right: 0;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(left,rgb(0, 217, 255),rgb(0, 255, 149));
+}
+.section-about-us-text{
+    font-family: iran-sans2;
+    font-size: 23px;
+}
+.section-about-us-img{
+    border-radius: 34px;
+}
+.btn-sections{
+    background: rgb(0, 255, 76);
+    padding: 10px 35px;
+    border-radius: 15px;
+    border: none;
+    font-family: iran-sans2;
+}
+.btn-sections:hover{
+    background: transparent;
+    box-shadow: 0 0 18px rgb(170, 163, 163);
+}
+/* end section about */
+/* section projects */
+.section-projects-card{
+    border-radius: 4px;
+    width: 400px;
+    padding-top: 8px;
+    color: black;
+    background: white;
+}
+.section-projects-card-img{
+    height: 260px;
+    width: 80%;
+    border-radius: 4px;
+}
+.section-projects-card-title{
+    font-family: ferda;
+    font-size: 1.9rem;
+}
+.section-projects-card .card-text{
+    font-family: iran-sans2;
+}
+@media screen and (max-width: 1007px){
+    .section-projects-card{
+        width: 100%;
+    }
+    .section-projects-card-img{
+        height: 320px;
+    }
+}
+@media (min-width: 1008px) and (max-width: 1200px){
+    .section-projects-card{
+        width: 280px;
+    }
+    .section-projects-card-img{
+        height: 220px;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1394px){
+    .section-projects-card{
+        width: 350px;
+    }
+    .section-projects-card-img{
+        height: 240px;
+    }
+}
+/* end section projects */
+/* section sampleas */
+.carousel-sampleas-item{
+    width: 80%;
+    position: relative;
+}
+.carousel-sampleas{
+    height: 60vh;
+}
+.carousel-sampleas-item-texts{
+    position: absolute;
+    bottom: 50px;
+    right: 20%;
+}
+.carousel-sampleas-item-texts-title{
+    font-size: 2.8rem;
+    text-decoration: none !important;
+    font-family: iran-sans2;
+    color: rgb(255, 255, 25562);
+    transition: 0.6s;
+    text-shadow: 0 0 10px black;
+}
+.carousel-sampleas-item-texts-title:hover{
+    color: rgb(245, 9, 9);
+}
+@media screen and (max-width: 523px){
+    .carousel-sampleas{
+        height: 30vh !important;
+    }
+    .carousel-sampleas-item-texts-lead{
+        font-size: 15px;
+    }
+} 
+.carousel-sampleas-prev, .carousel-sampleas-next{
+    padding: 40px 40px !important;
+    background: rgb(187, 255, 0);
+    color: crimson !important;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.carousel-sampleas-prev:hover, .carousel-sampleas-next:hover{
+    background: black;
+}
+@media (min-width: 333px) and (max-width: 877px){
+    .carousel-sampleas-item-texts-title{
+        font-size: 1.5rem;
+    }
+    .carousel-sampleas-item-texts{
+        right: 10%;
+    }
+}
+@media screen and (max-width: 332px){
+    .carousel-sampleas-item-texts-title{
+        font-size: 0.8rem;
+    }
+}
+@media (min-width: 525px) and (max-width: 865px){
+    .carousel-sampleas{
+        height: 40vh;
+    }
+}
+
+/* end section sampleas */
+/* section front */
+.card-team{
+    border: none !important;
+    box-shadow: 0 0 32px rgb(201, 197, 197);
+    border-radius: 15px;
+    padding-top: 15px;
+}
+.card-team-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px rgb(240, 237, 237);
+}
+.card-team-title{
+    font-family: iran-sans2;
+}
+.card-team-text{
+    font-family: iranSans;
+    color: rgb(190, 179, 179);
+}
+@media (min-width: 999px) and (max-width: 1199px){
+    .card-team-text{
+       font-size: 13px;
+    }
+}
+/* end section front */
+/* section call we */
+.section-callWe-form{
+    padding: 20px 20px;
+    box-shadow: 0 0 2px rgb(204, 197, 197);
+    border-radius: 20px;
+    width: 70%;
+}
+.section-callWe-textbox{
+    width: 70%;
+    height: 49px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-family: iranSans;
+    font-weight: normal;
+    transition: 0.6s;
+    box-shadow: 0 0 15px rgb(224, 219, 219) !important;
+    border: none !important;
+}
+.section-callWe-textbox:focus::placeholder{
+    text-shadow: 0 0 10px rgb(128, 247, 17);
+}
+.section-callWe-textarea{
+    height: 120px;
+}
+.section-callWe-btn{
+    width: 160px;
+    height: 48px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2.3px solid rgb(157, 255, 0);
+    font-family: iranSans;
+    position: relative;
+}
+.section-callWe-btn::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.493);
+    transition: 0.5s;
+}
+.section-callWe-btn:hover::after{
+    height: 100%;
+}
+.section-callWe-btn:hover{
+    border: none !important;
+    box-shadow: 0 0 15px rgb(235, 229, 229);
+    color: white !important;
+}
+@media screen and (max-width: 768px){
+    .section-callWe-form{
+        width: 100%;
+    }
+    .section-callWe-textbox{
+        width: 100%;
+    }
+}
+/* end section call we */
+/* section about us page */
+.section-title-pages{
+    font-family: iranSans;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    background: -webkit-linear-gradient(left,rgb(209, 196, 196),rgb(43, 40, 40));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 30px 20px 5px gray;
+}
+.section-title-pages-hr{
+    width: 80%;
+    height: 5px;
+    background: -webkit-linear-gradient(left,rgb(0, 255, 242),rgb(0, 255, 191),rgb(0, 255, 157));
+}
+@media screen and (max-width: 444px){
+    .section-title-pages{
+        font-size: 1.4rem;
+    }
+}
+@media (min-width: 444px) and (max-width: 779px){
+    .section-title-pages{
+        font-size: 2rem;
+    }
+}
+.section-about-us-item{
+    font-size: 2.2rem;
+    font-family: iranSans;
+    color: rgb(10, 245, 108);
+    text-shadow: 10px 0 15px black;
+}
+/* end section about us page */
+/* section form project page */
+.select-title-project-form{
+    width: 40% !important;
+    font-family: iranSans;
+}
+/* end section form project page */
+/* section front page */
+.card-team-page{
+    border-radius: 25%;
+    border: none;
+    box-shadow: 0 0 10px 1px rgb(221, 211, 211);
+}
+.card-team-page-img{
+    width: 60%;
+    height: 30%;
+    border-radius: 25%;
+}
+.card-team-page .card-body{
+    font-family: iranSans2;
+}
+.card-team-page-title{
+    font-family: iranSans !important;
+    font-size: 1.3rem;
+    color: transparent;
+    background: -webkit-linear-gradient(left,rgb(102, 209, 223),rgb(0, 255, 149));
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+}
+.card-team-page-title::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 41%;
+    width: 80px;
+    height: 3px;
+    background: rgb(253, 3, 3);
+    border-radius: 5px;
+    box-shadow: 0 5px 2px gray;
+}
+.card-team-page-text{
+    font-size: 1.1rem;
+}
+/* end section front page */
+/* section about person front */
+.title-left{
+    font-size: 2rem;
+    position: relative;
+}
+.title-left:before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    width: 100px;
+    bottom: -12px;
+}
+.about-mf .container{
+    box-shadow: 0 0 8px 2px rgb(224, 215, 215);
+}
+.about-mf .box-shadow-full {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .about-mf .about-img {
+    margin-bottom: 2rem;
+  }
+  
+  .about-mf .about-img img {
+    margin-left: 10px;
+  }
+  
+  @media (min-width: 767px) {
+    .about-mf .box-pl2 {
+      margin-top: 3rem;
+      padding-left: 0rem;
+    }
+  }
+  .skill-mf{
+    font-family: iranSans;
+  }
+  .skill-mf span {
+    color: #4e4e4e;
+  }
+  .skill-mf .progress {
+    background-color: #cde1f8;
+    margin: 0.5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: 0.7rem;
+  }
+  .about-info{
+    font-family: iranSans;
+  }
+  .skill-mf .progress .progress-bar {
+    height: 0.7rem;
+    background-color: #0078ff;
+  }
+  .about-me .title-box-2{
+    font-family: ferda;
+  }
+  .about-me .lead{
+    font-family: iranSans2;
+  }
+/* end section about person front */
+/* end sections */
+/* footer */
+.footer{
+    padding-top: 40px;
+    margin-top: 55px;
+    background: url(../image/Software-Developer-Main-Image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.footer-container{
+    position: inherit;
+}
+.footer-bg-opacity{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(49, 54, 50);
+    opacity: 0.6;
+}
+.hr{
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: rgb(48, 46, 46);
+}
+.footer-title{
+    font-family: ferda;
+    text-shadow: 4px 0 2px white;
+}
+.footer-link{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: iranSans;
+    font-size: 1.7rem;
+    margin-top: 15px;
+    text-align: end;
+    direction: rtl;
+    transition: all 0.5s ease-in-out;
+}
+.footer-link-icon{
+    margin-right: 10px;
+}
+.footer-link:hover{
+    color: rgb(229, 255, 0);
+}
+.footer-bottom{
+    background: rgba(0, 217, 255, 0.548);
+    z-index: 2;
+}
+.footer-bottom-text{
+    font-family: iran-sans2;
+    font-size: 2rem;
+    padding: 5px 5px;
+    background: rgba(255, 166, 0, 0.747);
+    clip-path: polygon(100% 20%,100% 80%,0 100%,0 0);
+}
+.footer-bottom-icon{
+    font-size: 2.3rem;
+    margin-left: 20px;
+    color: orange;
+}
+@media screen and (max-width: 429px){
+    .footer-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+    }
+}
+/* end footer */
+.di-rtl{
+    direction: rtl !important;
+}
+.my-7{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+/* header pages */
+.header-texts{
+    border-right: 5px solid rgb(231, 189, 111);
+    padding-right: 20px;
+}
+.header-pages-title{
+    font-size: 4rem;
+    font-family: ferda;
+}
+.header-pages-text{
+    font-family: iranSans;
+}
+.header-pages .bg-header{
+    background: url(../image/img-header.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(3px);
+}
+/* end header pages */
