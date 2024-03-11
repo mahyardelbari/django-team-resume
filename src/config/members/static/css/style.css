@@ -1,23 +1,4 @@
-@font-face{
-    font-family: ferda;
-    src: url(../fonts/Fedra\ Arabic\ Display\ AR\ LT\ Black.ttf) format('truetype');
-}
-@font-face{
-    font-family: iran-sans;
-    src: url(../fonts/Iranian\ Sans.ttf) format('truetype');
-}
-@font-face{
-    font-family: iran-sans2;
-    src: url(../fonts/IRANSANSDNFANUM.TTF) format('truetype');
-}
-@font-face{
-    font-family: iranSans;
-    src: url(../fonts/IRANSansX-Bold.woff);
-}
-@font-face{
-    font-family: iranSans2;
-    src: url(../fonts/IRANSansX-Regular.woff);
-}
+
 html{
     scroll-behavior: smooth;
 }
