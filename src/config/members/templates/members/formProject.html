@@ -45,24 +45,11 @@
     <!-- form -->
     <section class="section-callWe section-formRequest my-5">
         <div class="container">
-            <form class="section-callWe-form section-formRequest-form  my-5" action="#" method="get" id="formRequest">
-                <input class="form-control section-callWe-textbox" placeholder="نام شما" id="formRequestName" required/>
-                <input class="form-control section-callWe-textbox" placeholder="نام خانوادگی شما..." id="formRequestLastname" required/>
-                <input class="form-control section-callWe-textbox" type="tel" placeholder="شماره تلفن..." minlength="11" maxlength="11" id="formRequestPhono" required/>
-                <input class="form-control section-callWe-textbox" type="email" placeholder="ایمیل..." id="formRequestEmail" required/>
-                <input class="form-control section-callWe-textbox" placeholder="عنوان پروژه..." id="formRequestTitle" required/>
-                <select name="selectTitleProject" class="form-control select-title-project-form section-callWe-textbox" id="selectTitleProjectForm">
-                    <option>سایت و وبلاگ</option>
-                    <option>برنامه های موبایل</option>
-                    <option>برنامه های دسکتاپ</option>
-                    <option>کارهای مربوط به بخش وب (رسپانسیو سازی و ...)</option>
-                    <option>سایر</option>
-                </select>
-                <textarea class="form-control section-callWe-textbox section-callWe-textarea" placeholder="توضیحاتی درمورد پروژه..." id="callWeMessage"></textarea>
-                <button class="section-callWe-btn btn btn-outline-secondary" type="submit">
-                    ارسال
-                </button>
-            </form>
+                <form class="section-callWe-form section-formRequest-form  my-5" action="{% url 'form-project' %}" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="section-callWe-btn btn btn-outline-secondary" type="submit">ارسال</button>
+                </form>
         </div>
     </section>
     {% include "members/patial/footer_partial.html" %}
