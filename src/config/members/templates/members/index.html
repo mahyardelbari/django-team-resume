@@ -180,7 +180,7 @@
                 {% for slide in slider %}
                 <div class="swiper-slide">
                     <div class="card section-projects-card">
-                        <img src="{{ slide.image.url }}" class="card-img-top section-projects-card-img mx-auto"/>
+                        <img src="{{ slide.image.url }}" class="card-img-top section-projects-card-img mx-auto img-fluid"/>
                         <div class="card-body text-center">
                             <h3 class="card-title section-projects-card-title">
                                 {{ slide.title }}
@@ -208,7 +208,7 @@
             <div class="carousel-sampleas-wrapper swiper-wrapper">
                 {% for team_resume in team_resume %}
                 <div class="carousel-sampleas-slide swiper-slide d-flex justify-content-center">
-                    <img src="{{ team_resume.image.url }}" class="carousel-sampleas-item"/>
+                    <img src="{{ team_resume.image.url }}" class="carousel-sampleas-item img-fluid"/>
                     <div class="carousel-sampleas-item-texts">
                         {% if team_resume.title_url %}
                             <a href="{{ team_resume.title_url }}" class="carousel-sampleas-item-texts-title" target="_blank">
@@ -238,46 +238,21 @@
             <!-- end title section -->
             <div class="row my-5">
                 <!-- item -->
-                <div class="col-10 col-md-4 mx-auto my-3 my-md-0">
-                    <div class="card card-team">
-                        <img src="../../static/image/img-card-3.webp" class="card-img-top card-team-img mx-auto"/>
-                        <div class="card-body text-center">
-                            <h2 class="card-title card-team-title">سروش راشدی</h2>
-                            <p class="card-text card-team-text w-75 mx-auto">
-                                یک برنامه نویس فرانت اند دولوپر خیلی علاقه مند به کارم هستم و در حوزه برنامه نویسی وب دارم فعالیت میکنم
-                            </p>
+                {% for user in member  %}
+                    <div class="col-10 col-md-4 mx-auto my-3 my-md-0">
+                        <div class="card card-team">
+                            <img src="{{ user.avatar.url }}" class="card-img-top card-team-img mx-auto img-fluid"/>
+                            <div class="card-body text-center">
+                                <h2 class="card-title card-team-title">{{ user.full_name }}</h2>
+                                <p class="card-text card-team-text w-75 mx-auto">
+                                    {{ user.shot_description }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
                 <!-- end item -->
 
-                <!-- item -->
-                <div class="col-10 col-md-4 mx-auto my-3 my-md-0">
-                    <div class="card card-team">
-                        <img src="../../static/image/img-card-6.jpg" class="card-img-top card-team-img mx-auto"/>
-                        <div class="card-body text-center">
-                            <h2 class="card-title card-team-title">مهیار ابراهیمی</h2>
-                            <p class="card-text card-team-text w-75 mx-auto">
-                                یک بک اند دولوپر هستم با 3 سال تجربه برنامه نویسی و به پایتون و کتابخانه جنگو و پی اچ پی مسلط هستم
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end item -->
-
-                <!-- item -->
-                <div class="col-10 col-md-4 mx-auto my-3 my-md-0">
-                    <div class="card card-team">
-                        <img src="../../static/image/Software-Developer-Main-Image.jpg" class="card-img-top card-team-img mx-auto"/>
-                        <div class="card-body text-center">
-                            <h2 class="card-title card-team-title">امیر صدیق</h2>
-                            <p class="card-text card-team-text w-75 mx-auto">
-                                نزدیک 3 سال هست که توی رشته و شغل مورد علاقم که برنامه نویسی هست فعالیت میکنم و به کاتلین و جاوا مسلط هستم
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end item -->
             </div>
         </div>
     </section>
@@ -288,16 +263,12 @@
             <!-- title section -->
             <h2 class="display-5 title-section">ارتباط با ما</h2>
             <!-- end title section -->
-            <form class="section-callWe-form my-5" action="#" method="get" dir="rtl">
-                <input class="form-control section-callWe-textbox" placeholder="نام شما ..." id="callWeName"/>
-                <input class="form-control section-callWe-textbox" placeholder="نام خانوادگی شما..." id="callWeLastname"/>
-                <input class="form-control section-callWe-textbox" placeholder="شماره تلفن..." id="callWePhone"/>
-                <input class="form-control section-callWe-textbox" placeholder="ایمیل..." id="callWeEmail"/>
-                <textarea class="form-control section-callWe-textbox section-callWe-textarea" placeholder="پیام شما..." id="callWeMessage"></textarea>
-                <button class="section-callWe-btn btn btn-outline-secondary" type="submit">
-                    ارسال
-                </button>
+            <form class="section-callWe-form my-5" action="#" method="post" dir="rtl">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="section-callWe-btn btn btn-outline-secondary" type="submit">ارسال</button>
             </form>
+
         </div>
     </section>
     <!-- end section call we -->

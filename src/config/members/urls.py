@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import index, team_member, member_detail
-
+from .views import team_member, member_detail, ContactUsFormView
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', ContactUsFormView.as_view(), name='index'),
     path('team-member', team_member, name='team-member'),
     path('member-detai/<str:name>', member_detail, name='detail'),
 ]

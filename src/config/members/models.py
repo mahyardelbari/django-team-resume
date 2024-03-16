@@ -40,3 +40,17 @@ class UserSkill(models.Model):
 
 
 
+class ContactUs(models.Model):
+    name = models.CharField(max_length=300 , verbose_name='نام')
+    family = models.CharField(max_length=300 , verbose_name='نام خانوادگی')
+    email = models.EmailField(max_length=200 , verbose_name='ایمیل')
+    title = models.CharField(max_length=255)
+    message = models.TextField(verbose_name='متن تماس با ما')
+    created_date = models.DateTimeField(verbose_name='تاریخ ایجاد' , auto_now_add=True)
+    response = models.TextField(verbose_name='پاسخ تماس با ما' , null=True)
+    is_ready_by_admin = models.BooleanField(verbose_name='خوانده شده توسط ادمین' , default=False)
+    class Meta:
+        verbose_name = 'تماس با ما'
+        verbose_name_plural = 'لیست تماس با ما'
+    def __str__(self):
+        return self.title
