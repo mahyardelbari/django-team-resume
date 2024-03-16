@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'members',
+    'project_form',
+    'site_module',
     'django_render_partial',
 ]
 

@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teamSite</title>
+    <title>{{ setting.site_name }}</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- end bootstrap -->
@@ -64,7 +64,7 @@
         <div class="container">
             <!-- navbar -->
         <nav class="navbar navbar-expand-md">
-            <a href="./index.html" class="navbar-brand">teamSite</a>
+            <a href="" class="navbar-brand">{{ setting.site_name }}</a>
             <button class="navbar-toggler">
                 <i class="fas fa-bars"></i>
             </button>
@@ -162,7 +162,7 @@
                     <p class="section-about-us-text w-sm-75">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. 
                     </p>
-                    <a href="#" class="btn btn-sections">ادامه مطلب</a>
+                    <a href="{% url 'about-us' %}" class="btn btn-sections">ادامه مطلب</a>
                     </div>
                 </div>
             </div>
@@ -170,95 +170,32 @@
     </section>
     <!-- end section about us -->
     <!-- section projects -->
-    <section class="section-projects my-4">
-        <div class="container">
-            <!-- title section -->
-            <h2 class="display-5 title-section">خدمات و مهارت های تیم ما</h2>
-            <!-- end title section -->
-            <div class="swiper swiper1 mt-5 mx-auto">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/img-card-1.webp" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    طراحی وبسایت
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/card-img-2.jpg" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    فرانت اند
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/img-card-3.webp" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    بک اند
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/img-card-4.webp" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    ui ux
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/img-card-5.png" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    طراحی اپلیکیشن
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/img-card-6.jpg" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    رسپانسیو سازی
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card section-projects-card">
-                            <img src="../../static/image/img-card-7.jfif" class="card-img-top section-projects-card-img mx-auto"/>
-                            <div class="card-body text-center">
-                                <h3 class="card-title section-projects-card-title">
-                                    برنامه های ویندوز
-                                </h3>
-                                <p class="card-text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
-                            </div>
+<section class="section-projects my-4">
+    <div class="container">
+        <!-- title section -->
+        <h2 class="display-5 title-section">خدمات و مهارت های تیم ما</h2>
+        <!-- end title section -->
+        <div class="swiper swiper1 mt-5 mx-auto">
+            <div class="swiper-wrapper">
+                {% for slide in slider %}
+                <div class="swiper-slide">
+                    <div class="card section-projects-card">
+                        <img src="{{ slide.image.url }}" class="card-img-top section-projects-card-img mx-auto"/>
+                        <div class="card-body text-center">
+                            <h3 class="card-title section-projects-card-title">
+                                {{ slide.title }}
+                            </h3>
+                            <p class="card-text">{{ slide.text }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination swiper-pagination1"></div>
+                {% endfor %}
             </div>
+            <div class="swiper-pagination swiper-pagination1"></div>
         </div>
-    </section>
+    </div>
+</section>
+
     <!-- end section projects -->
     <!-- section sampleas -->
     <section class="section-sampleas my-5">
@@ -267,49 +204,30 @@
             <h2 class="display-5 title-section">نمونه کارهای تیم ما</h2>
             <!-- end title section -->
         </div>
-        <div class="carousel-sampleas swiper mt-5">
+         <div class="carousel-sampleas swiper mt-5">
             <div class="carousel-sampleas-wrapper swiper-wrapper">
+                {% for team_resume in team_resume %}
                 <div class="carousel-sampleas-slide swiper-slide d-flex justify-content-center">
-                    <img src="../../static/image/test1.webp" class="carousel-sampleas-item"/>
+                    <img src="{{ team_resume.image.url }}" class="carousel-sampleas-item"/>
                     <div class="carousel-sampleas-item-texts">
-                        <a href="#" class="carousel-sampleas-item-texts-title">
-                            وبسایت لورم ایپسوم
-                        </a>
-                        <!-- <p class="carousel-sampleas-item-texts-lead">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p> -->
+                        {% if team_resume.title_url %}
+                            <a href="{{ team_resume.title_url }}" class="carousel-sampleas-item-texts-title" target="_blank">
+                                {{ team_resume.title }}
+                            </a>
+                        {% else %}
+                            <p  class="carousel-sampleas-item-texts-title" >
+                                    {{ team_resume.title }}
+                            </p>
+                        {% endif %}
                     </div>
                 </div>
-                <div class="carousel-sampleas-slide swiper-slide d-flex justify-content-center">
-                    <img src="../../static/image/test2.webp" class="carousel-sampleas-item"/>
-                    <div class="carousel-sampleas-item-texts">
-                        <a href="#" class="carousel-sampleas-item-texts-title">
-                            وبسایت لورم ایپسوم
-                        </a>
-                        <!-- <p class="carousel-sampleas-item-texts-lead">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p> -->
-                    </div>
-                </div>
-                <div class="carousel-sampleas-slide swiper-slide d-flex justify-content-center">
-                    <img src="../../static/image/test3.webp" class="carousel-sampleas-item"/>
-                    <div class="carousel-sampleas-item-texts">
-                        <a href="#" class="carousel-sampleas-item-texts-title">
-                            وبسایت لورم ایپسوم
-                        </a>
-                        <!-- <p class="carousel-sampleas-item-texts-lead">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p> -->
-                    </div>
-                </div>
-                <div class="carousel-sampleas-slide swiper-slide d-flex justify-content-center">
-                    <img src="../../static/image/test4.webp" class="carousel-sampleas-item"/>
-                    <div class="carousel-sampleas-item-texts">
-                        <a href="#" class="carousel-sampleas-item-texts-title">
-                            وبسایت لورم ایپسوم
-                        </a>
-                        <!-- <p class="carousel-sampleas-item-texts-lead">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p> -->
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="carousel-sampleas-pagination swiper-pagination"></div>
             <div class="carousel-sampleas-prev swiper-button-prev"></div>
             <div class="carousel-sampleas-next swiper-button-next"></div>
         </div>
+
     </section>
     <!-- end section samples -->
     <!-- section front -->

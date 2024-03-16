@@ -4,7 +4,9 @@
         <div class="container">
             <!-- navbar -->
             <nav class="navbar navbar-expand-md">
-                <a href="index.html" class="navbar-brand">teamSite</a>
+                <a href="{% url 'index' %}" class="navbar-brand">{{ setting.site_name }}</a>
+{#                <img src="{{ setting.site_logo.url }}" alt="Icon" class="icon-img">#}
+
                 <button class="navbar-toggler">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -57,4 +59,3 @@
                 </li>
             </ul>
         </nav>
-        <!-- end navbar mobile -->

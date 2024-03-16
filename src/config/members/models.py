@@ -7,7 +7,7 @@ from datetime import datetime
 
 class Team(models.Model):
 	full_name = models.CharField(max_length=30, verbose_name="full_name", null=True, blank=True)
-	avatar = models.ImageField(upload_to="avatar/", null=True, blank=True,)
+	avatar = models.ImageField(upload_to="images/avatar", null=True, blank=True,)
 	role = models.CharField(max_length=30, verbose_name="role", null=True, blank=True)
 	linkedin = models.URLField(max_length=200, verbose_name="linkedin", null=True, blank=True)
 	github = models.URLField(max_length=200, verbose_name="github", null=True, blank=True)
@@ -39,27 +39,4 @@ class UserSkill(models.Model):
 		verbose_name_plural = 'مهارت ها'
 
 
-class Project(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    phone_number = models.CharField(max_length=11)
-    email = models.EmailField()
-    title = models.CharField(max_length=200)
-    PROJECT_CHOICES = [
-	    ('سایت و وبلاگ','سایت و وبلاگ'),
-	    ('برنامه های دسکتاپ','برنامه های دسکتاپ'),
-	    ('برنامه های موبایل', 'برنامه های موبایل'),
-	    ('کارهای مربوط به بخش وب (رسپانسیو سازی و ...)','کارهای مربوط به بخش وب (رسپانسیو سازی و ...)'),
-	    ('سایر','سایر'),
-    ]
-    project_type = models.CharField(max_length=50, choices=PROJECT_CHOICES, default='انتخاب کنید')
-    description = models.TextField()
-    create_date = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-	    return self.first_name
-
-    class Meta:
-	    verbose_name = 'درخواست '
-	    verbose_name_plural = 'درخواست ها'
 
