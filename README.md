@@ -59,3 +59,6 @@ To run the tests, `cd` into the directory where `manage.py` is:
 ```sh
 (env)$ python manage.py test 
 ```
+
+## توجه توجه!!
+برای مشاهدده سایت بهتر است دیتابیس رو از پنل ادمین خودتون کامل کنید
